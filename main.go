@@ -1,12 +1,12 @@
 package main
 
 import (
-	"os"
-	"github.com/gin-gonic/gin"
-	"github.com/athiramjayaprasad/Restaurant-Management/routes"
-	"github.com/athiramjayaprasad/Restaurant-Management/middleware"
-	"github.com/athiramjayaprasad/Restaurant-Management/database"
-	"go.mongodb.org/mongo-driver/mongo"
+	 "os"
+	 "github.com/gin-gonic/gin"
+	 "github.com/athiramjayaprasad/Restaurant-Management/routes"
+	 "github.com/athiramjayaprasad/Restaurant-Management/middleware"
+	 "github.com/athiramjayaprasad/Restaurant-Management/database"
+	 "go.mongodb.org/mongo-driver/mongo"
 )
 
 var foodCollection *mongo.Collection = database.OpenCollection(database.Client, "food")
@@ -28,7 +28,7 @@ func main()  {
 	routes.OrderRoutes(router)
 	routes.OrderItemRoutes(router)
 
-	router.Run(":" + port)     
-
-
+	router.Run(":" + port)                
+	
+         
 }
